@@ -1,7 +1,7 @@
 import './IpLocal.css';
 import React, { useState, useEffect } from 'react';
 import { IpCardInfo } from '../IpCardInfo/IpCardInfo';
-// import { fetchLocalIp } from '../Util/util';
+import { fetchLocalIp } from '../Util/util';
 interface IpInfo {
   ip?: string
   version?: string
