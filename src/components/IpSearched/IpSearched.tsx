@@ -34,8 +34,8 @@ interface IpInfo {
 
 export const IpSearched: React.FC = () => {
   const [requestIpInfo, setRequestIpInfo] = useState<IpInfo>({});
-  const [ipAddress, setIpAddress] = useState<string>("");
-  const [ipField, setIpField] = useState<string>("");
+  const [ipAddress, setIpAddress] = useState<string | null>("");
+  const [ipField, setIpField] = useState<string | null>("");
   const [completedRequest, setCompletedRequest] = useState(false);
 
   
