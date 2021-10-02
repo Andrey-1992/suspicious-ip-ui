@@ -1,6 +1,6 @@
 import './IpCard.css'
 import React from 'react';
-// import { IpCardField } from '../IpCardField/IpCardField';
+import { IpCardField } from '../IpCardField/IpCardField';
 import { IpCardInfo } from '../IpCardInfo/IpCardInfo';
 
 interface IpInfo {
