@@ -33,15 +33,16 @@ interface IpInfo {
 }
 interface Props {
   ipInfo?: IpInfo;
-
+  ipField?: string
+  ipAddress?: string
   saveToStorage?: () => void;
 }
 
-export const IpCard: React.FC = ({ipInfo, ipField, ipAddress, saveToStorage}) => {
+export const IpCardDetails: React.FC<Props> = ({ipInfo, ipField, ipAddress, saveToStorage}) => {
   if (ipField === "all") {
     return (
       <div className="ip-card-info">
-        <IpCardInfo ipInfo={ip} saveToStorage={saveToStorage}/>
+        <IpCardInfo ipInfo={ipInfo} saveToStorage={saveToStorage}/>
       </div>
     )
   } 
