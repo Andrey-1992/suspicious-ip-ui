@@ -31,6 +31,10 @@ interface IpInfo {
   org?: string
 }
 
+interface DataStorage {
+
+}
+
 export const IpLocal: React.FC = () => {
   const [requestLocalIp, setRequestLocalIp] = useState<IpInfo>({});
 
@@ -44,7 +48,9 @@ export const IpLocal: React.FC = () => {
   }
 
   // const saveToStorage = () => {
-  //   localStorage.setItem(requestLocalIp.ip, JSON.stringify(requestLocalIp))
+  //   const dataToStore: string 
+  //   dataToStore = requestLocalIp.ip;
+  //   localStorage.setItem(dataToStoretypescritp , JSON.stringify(requestLocalIp))
   // }
   
   return  (

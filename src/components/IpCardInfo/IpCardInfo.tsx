@@ -31,7 +31,7 @@ interface IpInfo {
   org?: string
 }
 interface Props {
-  ipInfo?: IpInfo;
+  ipInfo: IpInfo;
   saveToStorage?: () => void;
 }
 
