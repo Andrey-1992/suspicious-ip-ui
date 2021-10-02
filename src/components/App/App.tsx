@@ -4,6 +4,7 @@ import { Header } from '../Header/Header';
 import { Error } from '../Error/Error';
 import { Home } from '../Home/Home';
 import { IpLocal } from '../IpLocal/IpLocal';
+import { IpSearched } from '../IpSearched/IpSearched';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Error />
       <Home />
       <IpLocal />
+      <IpSearched />
     </div>
   );
 }
