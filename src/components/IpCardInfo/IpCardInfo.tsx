@@ -2,7 +2,7 @@ import './IpCardInfo.css'
 import React from 'react';
 import { Loader } from '../Loader/Loader';
 
-export const IpCardInfo = () => { 
+export const IpCardInfo: React.FC = () => { 
   return (
     <p>Test IpCardInfo</p>
   )

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { IpCardInfo } from '../IpCardInfo/IpCardInfo';
 // import { fetchLocalIp } from '../Utils/utils';
 
-export const IpLocal = () => {
+export const IpLocal: React.FC = () => {
   // const [requestLocalIp, setRequestLocalIp] = useState({});
 
   // useEffect(() => {
