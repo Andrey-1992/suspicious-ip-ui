@@ -1,6 +1,6 @@
 import './IpSearched.css';
 import React, { useState } from 'react';
-// import IpCard from '../IpCard/IpCard';
+import { IpCardDetails } from '../IpCardDetails/IpCardDetails';
 // import IpForm from '../IpForm/IpForm';
 import { fetchAllExternalIp } from '../Util/util';
 interface IpInfo {

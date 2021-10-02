@@ -1,13 +1,47 @@
 import './IpCard.css'
 import React from 'react';
-import IpCardField from '../IpCardField/IpCardField';
+// import { IpCardField } from '../IpCardField/IpCardField';
 import { IpCardInfo } from '../IpCardInfo/IpCardInfo';
 
-const IpCard: React.FC = ({ip, ipField, ipAddress, saveToStorage}) => {
+interface IpInfo {
+  ip?: string
+  version?: string
+  city?: string
+  region?: string
+  region_code?: string
+  country_code?: string
+  country?: string
+  country_name?: string
+  continent_code?: string
+  country_code_iso3?: string
+  country_capital?: string
+  country_tld?: string
+  in_eu?: boolean
+  postal?: string
+  latitude?: number
+  longitude?: number
+  timezone?: string
+  utc_offset?: string
+  country_calling_code?: string
+  currency?: string
+  currency_name?: string
+  languages?: string
+  country_area?: number
+  country_population?: number
+  asn?: string | null
+  org?: string | null
+}
+interface Props {
+  ipInfo?: IpInfo;
+
+  saveToStorage?: () => void;
+}
+
+export const IpCard: React.FC = ({ipInfo, ipField, ipAddress, saveToStorage}) => {
   if (ipField === "all") {
     return (
       <div className="ip-card-info">
-        <IpCardInfo ip={ip} saveToStorage={saveToStorage}/>
+        <IpCardInfo ipInfo={ip} saveToStorage={saveToStorage}/>
       </div>
     )
   } 
