@@ -3,6 +3,7 @@ import React from 'react';
 import { Header } from '../Header/Header';
 import { Error } from '../Error/Error';
 import { Home } from '../Home/Home';
+import { IpLocal } from '../IpLocal/IpLocal';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header /> 
       <Error />
       <Home />
+      <IpLocal />
     </div>
   );
 }
