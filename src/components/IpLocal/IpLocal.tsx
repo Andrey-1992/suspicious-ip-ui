@@ -2,7 +2,6 @@ import './IpLocal.css';
 import React, { useState, useEffect } from 'react';
 import { IpCardInfo } from '../IpCardInfo/IpCardInfo';
 // import { fetchLocalIp } from '../Util/util';
-
 interface IpInfo {
   ip?: string
   version?: string
@@ -35,14 +34,14 @@ interface IpInfo {
 export const IpLocal: React.FC = () => {
   const [requestLocalIp, setRequestLocalIp] = useState<IpInfo>({});
 
-  // useEffect(() => {
-  //   getLocalIpInfo()
-  // }, [])
+  useEffect(() => {
+    getLocalIpInfo()
+  }, [])
 
-  // const getLocalIpInfo = () => {
-  //   return fetchLocalIp()
-  //   .then(data => setRequestLocalIp(data))
-  // }
+  const getLocalIpInfo = () => {
+    return fetchLocalIp()
+    .then(data => setRequestLocalIp(data))
+  }
 
   // const saveToStorage = () => {
   //   localStorage.setItem(requestLocalIp.ip, JSON.stringify(requestLocalIp))
@@ -56,12 +55,3 @@ export const IpLocal: React.FC = () => {
     </div>
   )
 }
-
-// IpLocal.propTypes = {
-//   requestLocalIp: PropTypes.object,
-//   getLocalIpInfo: PropTypes.func,
-//   saveToStorage: PropTypes.func,
-//   IpCardInfo: PropTypes.element
-// }
-
-// export default IpLocal;
