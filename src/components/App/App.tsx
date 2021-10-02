@@ -12,7 +12,7 @@ function App() {
       <Header /> 
       <Home />
       <IpLocal />
-      <IpSearched />
+      {/* <IpSearched /> */}
       <Error />
     </div>
   );

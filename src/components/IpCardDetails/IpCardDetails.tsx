@@ -1,4 +1,4 @@
-import './IpCard.css'
+// import './IpCard.css'
 import React from 'react';
 import { IpCardField } from '../IpCardField/IpCardField';
 import { IpCardInfo } from '../IpCardInfo/IpCardInfo';
@@ -26,10 +26,10 @@ interface IpInfo {
   currency?: string
   currency_name?: string
   languages?: string
-  country_area?: number
-  country_population?: number
-  asn?: string | null
-  org?: string | null
+  country_area?: string
+  country_population?: string
+  asn?: string
+  org?: string
 }
 interface Props {
   ipInfo?: IpInfo;
@@ -42,11 +42,13 @@ export const IpCardDetails: React.FC<Props> = ({ipInfo, ipField, ipAddress, save
   if (ipField === "all") {
     return (
       <div className="ip-card-info">
+
         <IpCardInfo ipInfo={ipInfo} saveToStorage={saveToStorage}/>
       </div>
     )
   } 
   return (
-    <IpCardField field={ipField}  ipField={ip[ipField]} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
+
+    <IpCardField field={ipField}  ipField={ipInfo[ipField] ?? ""} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
   )
 }

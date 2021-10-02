@@ -60,6 +60,7 @@ export const IpSearched: React.FC = () => {
       <p>IpSearched</p>
       {/* <IpForm getRequestedIpInfo={getRequestedIpInfo} />
        {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage} key={ipAddress + Date.now()}/>} */}
+       <IpCardDetails ipInfo={requestIpInfo}/>
     </div>
   )
 }

@@ -43,11 +43,16 @@ export const IpLocal: React.FC = () => {
     return setRequestLocalIp(data);
   }
 
-  // const saveToStorage = () => {
-  //   const dataToStore: string 
-  //   dataToStore = requestLocalIp.ip;
-  //   localStorage.setItem(dataToStoretypescritp , JSON.stringify(requestLocalIp))
-  // }
+  const saveToStorage = () => {
+    // const dataToStore: string 
+    // dataToStore = requestLocalIp.ip;
+    if (requestLocalIp.ip) {
+      localStorage.setItem(requestLocalIp.ip , JSON.stringify(requestLocalIp))
+    }
+    const test = null
+    return test;
+  }
+
   
   return  (
     <div className="ip-card-info">
