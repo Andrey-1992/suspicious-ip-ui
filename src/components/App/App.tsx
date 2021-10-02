@@ -10,10 +10,10 @@ function App() {
   return (
     <div className="App">
       <Header /> 
-      <Error />
       <Home />
       <IpLocal />
       <IpSearched />
+      <Error />
     </div>
   );
 }

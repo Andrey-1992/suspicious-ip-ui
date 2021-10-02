@@ -11,19 +11,16 @@ export const fetchLocalIp = async () => {
   }
 }
 
-// const fetchAllExternalIp = async (ipAddress: string) => {
-//   try {
-//     const response = await fetch(`https://ipapi.co/${ipAddress}/json/`)
-//     if (!response.ok || response.status === 500) {
-//       throw Error('Error fetching local IP Info')
-//     }
-//     const data = await response.json()
-//     // console.log('test fetch all:', data)
-//     return data
-//   } catch(err) {
-//     console.log(err.message)
-//     return err;
-//   }
-// }
-
-// export { fetchLocalIp, fetchAllExternalIp };
+export const fetchAllExternalIp = async (ipAddress: string) => {
+  try {
+    const response = await fetch(`https://ipapi.co/${ipAddress}/json/`)
+    if (!response.ok || response.status === 500) {
+      throw Error('Error fetching local IP Info')
+    }
+    const data = await response.json()
+    // console.log('test fetch all:', data)
+    return data
+  } catch(err) {
+    return err;
+  }
+}
