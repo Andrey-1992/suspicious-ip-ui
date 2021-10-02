@@ -38,9 +38,9 @@ export const IpLocal: React.FC = () => {
     getLocalIpInfo()
   }, [])
 
-  const getLocalIpInfo = () => {
-    return fetchLocalIp()
-    .then(data => setRequestLocalIp(data))
+  const getLocalIpInfo = async () => {
+    const data = await fetchLocalIp();
+    return setRequestLocalIp(data);
   }
 
   // const saveToStorage = () => {
@@ -51,7 +51,7 @@ export const IpLocal: React.FC = () => {
     <div className="ip-card-info">
       {/* <IpCardInfo ip={requestLocalIp} saveToStorage={saveToStorage}/> */}
       <p>IpLocal</p>
-      <IpCardInfo />
+      <IpCardInfo ipInfo={requestLocalIp} />
     </div>
   )
 }
