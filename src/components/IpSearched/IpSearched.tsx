@@ -4,14 +4,43 @@ import React, { useState } from 'react';
 // import IpForm from '../IpForm/IpForm';
 import { fetchAllExternalIp } from '../Util/util';
 
+interface IpInfo {
+  ip?: string
+  version?: string
+  city?: string
+  region?: string
+  region_code?: string
+  country_code?: string
+  country?: string
+  country_name?: string
+  continent_code?: string
+  country_code_iso3?: string
+  country_capital?: string
+  country_tld?: string
+  in_eu?: boolean
+  postal?: string
+  latitude?: number
+  longitude?: number
+  timezone?: string
+  utc_offset?: string
+  country_calling_code?: string
+  currency?: string
+  currency_name?: string
+  languages?: string
+  country_area?: number
+  country_population?: number
+  asn?: string | null
+  org?: string | null
+}
+
 export const IpSearched: React.FC = () => {
-  const [requestIpInfo, setRequestIpInfo] = useState({});
+  const [requestIpInfo, setRequestIpInfo] = useState<IpInfo>({});
   const [ipAddress, setIpAddress] = useState("");
   const [ipField, setIpField] = useState("");
   // const [completedRequest, setCompletedRequest] = useState(false);
 
   
-  // const getRequestedIpInfo = (ipAddress, ipFieldInfo) => {
+  // const getRequestedIpInfo = (ipAddress:string , ipFieldInfo:string) => {
   //   return fetchAllExternalIp(ipAddress)
   //   .then(data => setRequestIpInfo(data))
   //   .then(setIpField(ipFieldInfo))
