@@ -31,10 +31,6 @@ interface IpInfo {
   org?: string
 }
 
-interface DataStorage {
-
-}
-
 export const IpLocal: React.FC = () => {
   const [requestLocalIp, setRequestLocalIp] = useState<IpInfo>({});
 

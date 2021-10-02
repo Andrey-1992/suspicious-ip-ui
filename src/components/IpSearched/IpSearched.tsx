@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 // import IpCard from '../IpCard/IpCard';
 // import IpForm from '../IpForm/IpForm';
 import { fetchAllExternalIp } from '../Util/util';
-
 interface IpInfo {
   ip?: string
   version?: string
@@ -35,22 +34,22 @@ interface IpInfo {
 
 export const IpSearched: React.FC = () => {
   const [requestIpInfo, setRequestIpInfo] = useState<IpInfo>({});
-  const [ipAddress, setIpAddress] = useState("");
-  const [ipField, setIpField] = useState("");
-  // const [completedRequest, setCompletedRequest] = useState(false);
+  const [ipAddress, setIpAddress] = useState<string>("");
+  const [ipField, setIpField] = useState<string>("");
+  const [completedRequest, setCompletedRequest] = useState(false);
 
   
-  // const getRequestedIpInfo = (ipAddress:string , ipFieldInfo:string) => {
-  //   return fetchAllExternalIp(ipAddress)
-  //   .then(data => setRequestIpInfo(data))
-  //   .then(setIpField(ipFieldInfo))
-  //   .then(setIpAddress(ipAddress))
-  //   .then(error => console.log(error))
+  const getRequestedIpInfo = (ipAddress:string , ipFieldInfo:string) => {
+    return fetchAllExternalIp(ipAddress)
+    .then(data => setRequestIpInfo(data))
+    .then(setIpField(ipFieldInfo))
+    .then(setIpAddress(ipAddress))
+    .then(error => console.log(error))
 
-  //   if (!requestIpInfo) {
-  //     setCompletedRequest(true)
-  //   }
-  // }
+    if (!requestIpInfo) {
+      setCompletedRequest(true)
+    }
+  }
 
   // const saveToStorage = () => {
   //   localStorage.setItem(requestIpInfo.ip, JSON.stringify(requestIpInfo))
