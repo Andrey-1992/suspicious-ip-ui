@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 // import IpForm from '../IpForm/IpForm';
 import { fetchAllExternalIp } from '../Util/util';
 
-export const IpSearched = () => {
-  // const [requestIpInfo, setRequestIpInfo] = useState({});
-  // const [ipAddress, setIpAddress] = useState("");
-  // const [ipField, setIpField] = useState("");
+export const IpSearched: React.FC = () => {
+  const [requestIpInfo, setRequestIpInfo] = useState({});
+  const [ipAddress, setIpAddress] = useState("");
+  const [ipField, setIpField] = useState("");
   // const [completedRequest, setCompletedRequest] = useState(false);
 
   
@@ -29,6 +29,7 @@ export const IpSearched = () => {
   
   return  (
     <div className="ipInfo">
+      <p>IpSearched</p>
       {/* <IpForm getRequestedIpInfo={getRequestedIpInfo} />
        {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage} key={ipAddress + Date.now()}/>} */}
     </div>
