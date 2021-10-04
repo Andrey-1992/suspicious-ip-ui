@@ -58,7 +58,7 @@ export const IpLocal: React.FC = () => {
     <div className="ip-card-info">
       {/* <IpCardInfo ip={requestLocalIp} saveToStorage={saveToStorage}/> */}
       <p>IpLocal</p>
-      <IpCardInfo ipInfo={requestLocalIp} />
+      <IpCardInfo ipInfo={requestLocalIp} saveToStorage={saveToStorage}/>
     </div>
   )
 }

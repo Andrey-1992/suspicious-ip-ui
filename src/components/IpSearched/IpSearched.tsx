@@ -39,12 +39,18 @@ export const IpSearched: React.FC = () => {
   const [completedRequest, setCompletedRequest] = useState(false);
 
   
-  const getRequestedIpInfo = (ipAddress:string , ipFieldInfo:string) => {
-    return fetchAllExternalIp(ipAddress)
-    .then(data => setRequestIpInfo(data))
-    // .then(setIpField(ipFieldInfo))
-    // .then(setIpAddress(ipAddress))
-    .then(error => console.log(error))
+  const getRequestedIpInfo = (ipAddress:string, ipFieldInfo:string) => {
+    setIpField(ipFieldInfo)
+    setIpAddress(ipAddress)
+
+
+    // if (ipAddress && ipFieldInfo) {
+      return fetchAllExternalIp(ipAddress)
+      .then(data => setRequestIpInfo(data))
+      // .then(setIpField(ipFieldInfo))
+      // .then(setIpAddress(ipAddress))
+      .then(error => console.log(error))
+    // }
 
     if (!requestIpInfo) {
       setCompletedRequest(true)
