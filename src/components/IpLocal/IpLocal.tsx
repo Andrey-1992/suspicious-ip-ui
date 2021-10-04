@@ -44,13 +44,11 @@ export const IpLocal: React.FC = () => {
   }
 
   const saveToStorage = () => {
-    // const dataToStore: string 
-    // dataToStore = requestLocalIp.ip;
     if (requestLocalIp.ip) {
       localStorage.setItem(requestLocalIp.ip , JSON.stringify(requestLocalIp))
     }
-    const test = null
-    return test;
+    // const test = null
+    // return test;
   }
 
   

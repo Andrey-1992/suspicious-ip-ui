@@ -26,14 +26,14 @@ interface IpInfo {
   currency?: string
   currency_name?: string
   languages?: string
-  country_area?: number
-  country_population?: number
-  asn?: string | null
-  org?: string | null
+  country_area?: string
+  country_population?: string
+  asn?: string 
+  org?: string 
 }
 
 export const IpSearched: React.FC = () => {
-  const [requestIpInfo, setRequestIpInfo] = useState({});
+  const [requestIpInfo, setRequestIpInfo] = useState<IpInfo>({});
   const [ipAddress, setIpAddress] = useState<string | null>("");
   const [ipField, setIpField] = useState<string | null>("");
   const [completedRequest, setCompletedRequest] = useState(false);
@@ -57,16 +57,18 @@ export const IpSearched: React.FC = () => {
     }
   }
 
-  // const saveToStorage = () => {
-  //   localStorage.setItem(requestIpInfo.ip, JSON.stringify(requestIpInfo))
-  // }
+  const saveToStorage = () => {
+    if (requestIpInfo.ip) {
+      localStorage.setItem(requestIpInfo.ip, JSON.stringify(requestIpInfo))
+    }
+  }
   
   return  (
     <div className="ipInfo">
       <p>IpSearched</p>
       {/* <IpForm getRequestedIpInfo={getRequestedIpInfo} />
        {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage} key={ipAddress + Date.now()}/>} */}
-       <IpCardDetails ipInfo={requestIpInfo}/>
+       <IpCardDetails ipInfo={requestIpInfo} saveToStorage={saveToStorage}/>
     </div>
   )
 }
