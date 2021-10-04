@@ -9,7 +9,7 @@ export const Home = () => {
         in your network, with the opportunity to save those
         reports inside of the app.</p>
         <p className="about-text">This app is using 
-          <a href="https://ipapi.co/api/#introduction" target="_blank"> ipapi </a> API </p>
+          <a href="https://ipapi.co/api/#introduction" target="_blank" rel="noreferrer"> ipapi </a> API </p>
     </div>
   )
 }

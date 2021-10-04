@@ -47,8 +47,11 @@ export const IpCardDetails: React.FC<Props> = ({ipInfo, ipField, ipAddress, save
       </div>
     )
   } 
-  return (
 
-    <IpCardField field={ipField}  ipField={ipInfo[ipField] ?? ""} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
-  )
+  // if (ipInfo) {
+    return (
+      <p>test</p>
+      // <IpCardField field={ipField}  ipField={ipInfo?.[ipField] ? ipInfo[ipField]: ""} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
+    )
+  // }
 }
