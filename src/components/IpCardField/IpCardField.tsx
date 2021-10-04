@@ -1,7 +1,34 @@
 import './IpCardField.css'
 import React from 'react';
 import { Loader } from '../Loader/Loader';
-
+interface IpInfo {
+  ip?: string
+  version?: string
+  city?: string
+  region?: string
+  region_code?: string
+  country_code?: string
+  country?: string
+  country_name?: string
+  continent_code?: string
+  country_code_iso3?: string
+  country_capital?: string
+  country_tld?: string
+  in_eu?: boolean
+  postal?: string
+  latitude?: number
+  longitude?: number
+  timezone?: string
+  utc_offset?: string
+  country_calling_code?: string
+  currency?: string
+  currency_name?: string
+  languages?: string
+  country_area?: string
+  country_population?: string
+  asn?: string
+  org?: string
+}
 interface Props {
   field?: string
   ipField?: string

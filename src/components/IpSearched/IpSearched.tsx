@@ -1,7 +1,7 @@
 import './IpSearched.css';
 import React, { useState } from 'react';
 import { IpCardDetails } from '../IpCardDetails/IpCardDetails';
-// import IpForm from '../IpForm/IpForm';
+import { IpForm } from '../IpForm/IpForm';
 import { fetchAllExternalIp } from '../Util/util';
 interface IpInfo {
   ip?: string
@@ -68,7 +68,8 @@ export const IpSearched: React.FC = () => {
       <p>IpSearched</p>
       {/* <IpForm getRequestedIpInfo={getRequestedIpInfo} />
        {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage} key={ipAddress + Date.now()}/>} */}
-       <IpCardDetails ipInfo={requestIpInfo} saveToStorage={saveToStorage}/>
+      <IpForm getRequestedIpInfo={getRequestedIpInfo} />
+      <IpCardDetails ipInfo={requestIpInfo} saveToStorage={saveToStorage}/>
     </div>
   )
 }
