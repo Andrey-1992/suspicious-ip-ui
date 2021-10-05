@@ -13,3 +13,21 @@
   font-size: 150%;
   font-family: monospace;
 }
+
+.nav-buttons::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: rgb(90, 79, 160);
+  transition: width 0.55s ease-out;
+}
+
+.nav-buttons:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+  cursor: pointer;
+}
