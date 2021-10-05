@@ -5,3 +5,11 @@
   justify-content: space-around;
   width: 50%;
 }
+
+.nav-buttons {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.50rem;
+  font-size: 150%;
+  font-family: monospace;
+}
