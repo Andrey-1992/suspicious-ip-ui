@@ -25,3 +25,11 @@ form:hover {
 input {
   border: none;
 }
+
+input:focus {
+  outline: none;
+  color: rgb(131, 127, 10);
+  font-family: monospace;
+  font-size: 120%;
+  border: 5px;
+}
