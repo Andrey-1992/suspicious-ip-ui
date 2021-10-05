@@ -29,3 +29,9 @@
   font-size: 115%;
   cursor: pointer;
 }
+
+.saved-button {
+  margin-left: 35%;
+  padding: 2%;
+  font-family: monospace;
+}
