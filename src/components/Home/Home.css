@@ -1,0 +1,14 @@
+.home-view {
+  margin-top: 7%;
+  border: 5px solid #dad891;
+  border-radius: 10%;
+  width: 50%;
+  height: 70%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: rgb(254, 254, 254); */
+  background: whitesmoke;
+  opacity: 0.65;
+}
