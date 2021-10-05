@@ -12,3 +12,21 @@
   background: whitesmoke;
   opacity: 0.65;
 }
+
+.home-view:hover {
+  opacity: 0.79;
+  transform: scale(1.1);
+  transition: 0.7s ease-in-out;
+}
+
+.home-header {
+  font-size: 220%;
+  margin-left: 2%;
+}
+
+.about-header {
+  margin: 3%;
+  color: black;
+  font-size: 455%;
+  font-family: monospace;
+}
