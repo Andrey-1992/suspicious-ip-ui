@@ -16,3 +16,10 @@
   transition: 0.4s ease-in-out;
   cursor: pointer;
 }
+
+.ip-card-text {
+  margin-left: 5%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 110%;
+  margin: 3% 3% 3% 5%;
+}
