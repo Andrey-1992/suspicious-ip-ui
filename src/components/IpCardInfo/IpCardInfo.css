@@ -23,3 +23,9 @@
   font-size: 110%;
   margin: 3% 3% 3% 5%;
 }
+
+.ip-card-text:hover {
+  opacity: 0.50;
+  font-size: 115%;
+  cursor: pointer;
+}
