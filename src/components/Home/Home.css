@@ -30,3 +30,10 @@
   font-size: 455%;
   font-family: monospace;
 }
+
+.about-text {
+  margin: 3%;
+  color: black;
+  font-size: 155%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
