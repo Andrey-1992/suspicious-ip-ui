@@ -29,12 +29,12 @@ interface IpInfo {
   org?: string
 }
 interface Props {
-  getRequestedIpInfo?: (ipAddress: string, ipFieldInfo: string) => Promise<void>;
+  getRequestedIpInfo?: (ipAddress: any, ipFieldInfo: any) => void;
 }
 
 export const IpForm: React.FC<Props> = ({getRequestedIpInfo}) => {
-  const [ipAddress, setIpAddress] = useState<string | undefined>("");
-  const [ipField, setIpField] = useState<string | null>("");
+  const [ipAddress, setIpAddress] = useState<any>("");
+  const [ipField, setIpField] = useState<any>("");
   const ipFieldsContainer = [
   {Name:'Select a field', Value:''}, {Name:'All', Value:'all'}, {Name:'Ip', Value:'ip'}, {Name:'Version', Value:'version'}, 
   {Name:'City', Value:'city'}, {Name:'Region', Value:'region'}, {Name:'Country Name', Value:'country_name'},
@@ -45,10 +45,12 @@ export const IpForm: React.FC<Props> = ({getRequestedIpInfo}) => {
   {Name:'Currency', Value:'currency_name'}, {Name:'Languages', Values:'languages'}, {Name:'ASN', Value:'asn'}, 
   {Name:'Organization', Value:'org'}]
 
-  const searchIp = (event: any) => {
-    event.preventDefault();
-    // getRequestedIpInfo(pAddress, ipField);
-    clearInputs();
+  const searchIp = (event: any): void => {
+    // if (ipAddress) {
+      event.preventDefault();
+      // getRequestedIpInfo(ipAddress, ipField); 
+      clearInputs();
+    // }
   }
 
   const clearInputs = () => {
