@@ -45,11 +45,11 @@ export const IpForm: React.FC<Props> = ({getRequestedIpInfo}) => {
   {Name:'Currency', Value:'currency_name'}, {Name:'Languages', Values:'languages'}, {Name:'ASN', Value:'asn'}, 
   {Name:'Organization', Value:'org'}]
 
-  // const searchIp = (event) => {
-  //   event.preventDefault();
-  //   getRequestedIpInfo(ipAddress, ipField);
-  //   clearInputs();
-  // }
+  const searchIp = (event: any) => {
+    event.preventDefault();
+    // getRequestedIpInfo(pAddress, ipField);
+    clearInputs();
+  }
 
   const clearInputs = () => {
     setIpAddress("");
@@ -72,7 +72,7 @@ export const IpForm: React.FC<Props> = ({getRequestedIpInfo}) => {
           </option>
         ))}
       </select>
-      {/* <button onClick={searchIp}>Search </button> */}
+      <button onClick={searchIp}>Search </button>
       <p className="form-text">Type an IP Address and select a filter field.</p>
     </form>
   )
