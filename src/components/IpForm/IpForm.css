@@ -1,0 +1,35 @@
+form {
+  margin-top: 3%;
+  border: 3px solid #dad891;
+  border-radius: 5%;
+  padding: 7%;
+  width: 100%;
+  background: whitesmoke;
+  opacity: 0.80;
+  text-align:left;
+}
+
+form:hover {
+  opacity: 0.93;
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.form-text {
+  text-align: center;
+  font-size: 100%;
+  font-family: monospace;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  color: rgb(131, 127, 10);
+  font-family: monospace;
+  font-size: 120%;
+  border: 5px;
+}

@@ -1,0 +1,37 @@
+.single-card {
+  margin-top: 20%;
+  margin-left: -20%;
+  border: 5px solid #dad891;
+  border-radius: 10%;
+  width: 160%;
+  height: 105%;
+  background: whitesmoke;
+  opacity: 0.80;
+  text-align:left;
+}
+
+.single-card:hover {
+  opacity: 0.93;
+  transform: scale(1.01);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.ip-card-text {
+  margin-left: 5%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 110%;
+  margin: 3% 3% 3% 5%;
+}
+
+.ip-card-text:hover {
+  opacity: 0.50;
+  font-size: 115%;
+  cursor: pointer;
+}
+
+.saved-button {
+  margin-left: 35%;
+  padding: 2%;
+  font-family: monospace;
+}

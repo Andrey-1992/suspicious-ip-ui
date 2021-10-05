@@ -1,0 +1,43 @@
+ .nav {
+  display: flex;
+  flex-direction:row;
+  padding: 1%;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.nav-buttons {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.50rem;
+  font-size: 150%;
+  font-family: monospace;
+}
+
+.nav-buttons::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: rgb(90, 79, 160);
+  transition: width 0.55s ease-out;
+}
+
+.nav-buttons:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    justify-content: space-around;
+    width: 50%;
+  }
+}

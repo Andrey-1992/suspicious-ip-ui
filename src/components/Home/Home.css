@@ -1,0 +1,39 @@
+.home-view {
+  margin-top: 7%;
+  border: 5px solid #dad891;
+  border-radius: 10%;
+  width: 50%;
+  height: 70%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: rgb(254, 254, 254); */
+  background: whitesmoke;
+  opacity: 0.65;
+}
+
+.home-view:hover {
+  opacity: 0.79;
+  transform: scale(1.1);
+  transition: 0.7s ease-in-out;
+}
+
+.home-header {
+  font-size: 220%;
+  margin-left: 2%;
+}
+
+.about-header {
+  margin: 3%;
+  color: black;
+  font-size: 455%;
+  font-family: monospace;
+}
+
+.about-text {
+  margin: 3%;
+  color: black;
+  font-size: 155%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
