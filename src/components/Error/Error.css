@@ -1,0 +1,11 @@
+.error-img {
+  /* margin-top: 1%; */
+  width: 72%;
+  /* width: 150%; */
+  /* margin-left: -30%; */
+}
+
+ .error {
+   background-color: hsl(224, 53%, 14%);
+   width: 100%;
+ }

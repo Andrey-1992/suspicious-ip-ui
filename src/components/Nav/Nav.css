@@ -31,3 +31,13 @@
   right: auto;
   cursor: pointer;
 }
+
+@media screen and (max-width: 550px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    justify-content: space-around;
+    width: 50%;
+  }
+}
