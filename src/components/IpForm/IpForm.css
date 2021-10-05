@@ -8,3 +8,10 @@ form {
   opacity: 0.80;
   text-align:left;
 }
+
+form:hover {
+  opacity: 0.93;
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
