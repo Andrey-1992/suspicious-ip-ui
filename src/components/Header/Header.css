@@ -5,3 +5,10 @@
   margin: -0.5%;
   background-color: whitesmoke;
 }
+
+h1 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 335%;
+  padding-left: 1%;
+  color: rgb(49, 53, 135)
+}
