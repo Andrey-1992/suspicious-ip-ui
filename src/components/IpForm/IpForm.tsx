@@ -33,7 +33,7 @@ interface Props {
 }
 
 export const IpForm: React.FC<Props> = ({getRequestedIpInfo}) => {
-  const [ipAddress, setIpAddress] = useState<string | null>("");
+  const [ipAddress, setIpAddress] = useState<string | undefined>("");
   const [ipField, setIpField] = useState<string | null>("");
   const ipFieldsContainer = [
   {Name:'Select a field', Value:''}, {Name:'All', Value:'all'}, {Name:'Ip', Value:'ip'}, {Name:'Version', Value:'version'}, 
