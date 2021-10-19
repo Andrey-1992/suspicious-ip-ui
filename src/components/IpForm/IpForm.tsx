@@ -29,7 +29,7 @@ interface IpInfo {
   org?: string
 }
 interface Props {
-  getRequestedIpInfo?: (ipAddress: any, ipFieldInfo: any) => void;
+  getRequestedIpInfo?: () => void;
 }
 
 export const IpForm: React.FC<Props> = ({getRequestedIpInfo}) => {
@@ -45,10 +45,11 @@ export const IpForm: React.FC<Props> = ({getRequestedIpInfo}) => {
   {Name:'Currency', Value:'currency_name'}, {Name:'Languages', Values:'languages'}, {Name:'ASN', Value:'asn'}, 
   {Name:'Organization', Value:'org'}]
 
-  const searchIp = (event: any): void => {
+  const searchIp = (event: { preventDefault: () => void; }) => {
     // if (ipAddress) {
       event.preventDefault();
-      // getRequestedIpInfo(ipAddress, ipField); 
+      console.log(ipAddress)
+      // getRequestedIpInfo(); 
       clearInputs();
     // }
   }

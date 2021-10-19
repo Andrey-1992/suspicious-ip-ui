@@ -39,22 +39,26 @@ export const IpSearched: React.FC = () => {
   const [completedRequest, setCompletedRequest] = useState(false);
 
   
-  const getRequestedIpInfo = (ipAddress:string, ipFieldInfo:string) => {
-    setIpField(ipFieldInfo)
-    setIpAddress(ipAddress)
+  // const getRequestedIpInfo = (ipAddress:string, ipFieldInfo:string) => {
+    // setIpField(ipFieldInfo)
+    // setIpAddress(ipAddress)
 
 
     // if (ipAddress && ipFieldInfo) {
-      return fetchAllExternalIp(ipAddress)
-      .then(data => setRequestIpInfo(data))
+      // return fetchAllExternalIp(ipAddress)
+      // .then(data => setRequestIpInfo(data))
       // .then(setIpField(ipFieldInfo))
       // .then(setIpAddress(ipAddress))
-      .then(error => console.log(error))
+      // .then(error => console.log(error))
     // }
+    // return "test"
+    // if (!requestIpInfo) {
+      // setCompletedRequest(true)
+    // }
+  // }
 
-    if (!requestIpInfo) {
-      setCompletedRequest(true)
-    }
+  const getRequestedIpInfo = () => {
+    console.log('test function')
   }
 
   const saveToStorage = () => {
@@ -65,11 +69,11 @@ export const IpSearched: React.FC = () => {
   
   return  (
     <div className="ipInfo">
-      <p>IpSearched</p>
       {/* <IpForm getRequestedIpInfo={getRequestedIpInfo} />
        {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage} key={ipAddress + Date.now()}/>} */}
-      <IpForm getRequestedIpInfo={getRequestedIpInfo} />
-      <IpCardDetails ipInfo={requestIpInfo} saveToStorage={saveToStorage}/>
+      <IpForm getRequestedIpInfo={getRequestedIpInfo} key={Date.now()}/>
+      {ipAddress && <IpCardDetails ipInfo={requestIpInfo} saveToStorage={saveToStorage}/>}
+      {/* <IpCardDetails ipInfo={requestIpInfo} saveToStorage={saveToStorage}/> */}
     </div>
   )
 }
