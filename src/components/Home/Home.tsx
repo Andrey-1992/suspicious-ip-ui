@@ -1,6 +1,6 @@
 import './Home.css';
 
-export const Home = () => {
+export const Home: React.FC = () => {
   return (
     <div className="home-view">
       <h2 className="home-header">Welcome !</h2>
