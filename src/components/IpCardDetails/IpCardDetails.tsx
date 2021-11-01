@@ -39,6 +39,9 @@ interface Props {
 }
 
 export const IpCardDetails: React.FC<Props> = ({ipInfo, ipField, ipAddress, saveToStorage}) => {
+  const inFieldInfo = ipInfo;
+  console.log('inFieldInfo:', inFieldInfo)
+
   if (ipField === "all") {
     return (
       <div className="ip-card-info">
@@ -48,12 +51,12 @@ export const IpCardDetails: React.FC<Props> = ({ipInfo, ipField, ipAddress, save
     )
   } 
 
-  return (<p>Test</p>)
   // if (ipInfo && ipField) {
-    // return (
-      // <p>test</p>
-      // <IpCardField field={ipField}  ipField={ipInfo?.[ipField] ? ipInfo[ipField]: ""} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
-      // <IpCardField field={ipField}  ipField={ipInfo[ipField]} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
-    // )
-  // }
+  //   return (
+  //     // <p>test</p>
+  //     // <IpCardField field={ipField}  ipField={ipInfo?.[ipField] ? ipInfo[ipField]: ""} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
+  //     // <IpCardField field={ipField}  ipField={ipInfo[ipField]} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
+  //     )
+  //   }
+    return (<h1>Test</h1>)
 }
